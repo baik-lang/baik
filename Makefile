@@ -6,7 +6,7 @@ endif
 build:
 	@if [ ! -d "dist" ]; then echo "Create dist directory..."; mkdir dist; fi
 	@echo "Build BAIK source...."
-	@cc -DBAIK_MAIN -DBAIK_GENERATE_INAC -DCS_MMAP baik.c -o dist/baik -Wall -std=c99 -lreadline 
+	@cc -DBAIK_MAIN -DBAIK_GENERATE_INAC -DCS_MMAP baik.c -o dist/baik -Wall -std=c99 -lreadline -ldl
 	@echo "Binary path dist/baik"
 install:
 	@echo "install baik to $(PREFIX)/baik"
