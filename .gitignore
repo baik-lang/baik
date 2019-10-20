@@ -1,0 +1,12 @@
+.vscode/*
+build/*
+dist/*
+.DS_Store
+elf/*
+*.inadl
+*.o
+*.inac
+docs/example/ffi/*.inadl
+docs/example/ffi/*.o
+Cargo.lock
+docs/example/ffi/rust-ffi/target
