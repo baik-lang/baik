@@ -16,12 +16,13 @@ addons:
 
 script:
   - make
-  - mv dist/baik baik-$TRAVIS_OS_NAME-`uname -m`
+  - mv dist/baik baik
+  - tar czfv baik-$TRAVIS_OS_NAME-`uname -m`.tar.gz baik
 
 deploy:
   provider: releases
   api_key: $GITHUB_TOKEN
-  file: baik-$TRAVIS_OS_NAME-`uname -m`
+  file: baik-$TRAVIS_OS_NAME-`uname -m`.tar.gz
   skip_cleanup: true
   on:
     tags: true
